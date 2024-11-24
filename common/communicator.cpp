@@ -1,6 +1,6 @@
 #include "communicator.h"
 
-Communicator::Communicator(CommParams& pars, QObject *parent) : QUdpSocket(parent)
+TCommunicator::TCommunicator(TCommParams& pars, QObject *parent) : QUdpSocket(parent)
 {
     params = pars;
     ready = bind(params.rHost, params.rPort,
@@ -8,12 +8,12 @@ Communicator::Communicator(CommParams& pars, QObject *parent) : QUdpSocket(paren
     if (ready) connect(this,SIGNAL(readyRead()),this,SLOT(recieve()));
 }
 
-bool Communicator::isReady()
+bool TCommunicator::isReady()
 {
     return ready;
 }
 
-void Communicator::send(QByteArray msg)
+void TCommunicator::send(QByteArray msg)
 {
     if (ready)
     {
@@ -22,7 +22,7 @@ void Communicator::send(QByteArray msg)
     }
 }
 
-void Communicator::recieve()
+void TCommunicator::recieve()
 {
     if (hasPendingDatagrams())
     {

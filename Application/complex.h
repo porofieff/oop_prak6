@@ -15,6 +15,7 @@ class complex
     double re, im;
 public:
     complex();
+    complex(const int&);
     complex(double, double);
     complex(const QByteArray&);
 

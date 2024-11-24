@@ -8,3 +8,4 @@ QString& operator<< (QString& m, const QString& s)
     m.append(separator);
     return m;
 }
+

@@ -17,8 +17,12 @@ enum messages
     CHANGE_SIZE_REQUEST,
     CHANGE_POL_ANSWER,
     CHANGE_LAST_ANSWER,
-    GET_POLIN_SIZE,
-    SIZE_ANSWER,
+};
+
+enum modes
+{
+    COMPLEX_MODE = 1,
+    DOUBLE_MODE,
 };
 
 extern const QChar separator;

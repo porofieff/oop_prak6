@@ -5,7 +5,7 @@
 #include <QUdpSocket>
 #include <QHostAddress>
 
-struct CommParams
+struct TCommParams
 {
     QHostAddress rHost;
     quint16      rPort;
@@ -13,15 +13,15 @@ struct CommParams
     quint16      sPort;
 };
 
-class Communicator : public QUdpSocket
+class TCommunicator : public QUdpSocket
 {
     Q_OBJECT
 
     bool         ready;
-    CommParams  params;
+    TCommParams  params;
 
 public:
-    Communicator(CommParams&,QObject *parent = nullptr);
+    TCommunicator(TCommParams&,QObject *parent = nullptr);
     bool isReady();
 
 signals:

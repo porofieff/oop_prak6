@@ -133,6 +133,10 @@ void Interface::on_do_but_clicked()
 {
 
     QString msg;
+    if (ui->radio_complex->isChecked())
+        msg << QString().setNum(COMPLEX_MODE);
+    else
+        msg << QString().setNum(DOUBLE_MODE);
 
     if(prev_butt == 1)
     {

@@ -13,10 +13,8 @@ INCLUDEPATH += ../common
 
 SOURCES += \
         application.cpp \
-        array.cpp \
         complex.cpp \
         main.cpp \
-        polinome.cpp\
         ../common/communicator.cpp \
             ../common/common.cpp
 

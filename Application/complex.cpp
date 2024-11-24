@@ -4,7 +4,16 @@
 
 QChar complex::SEPARATOR = separator;
 
-complex::complex() {}
+complex::complex()
+{
+
+}
+
+complex::complex(const int& r)
+{
+    im = 0;
+    re = r;
+}
 
 double arg(double re, double im)
 {

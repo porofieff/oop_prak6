@@ -13,7 +13,8 @@ class Application : public QCoreApplication
 
     Communicator *comm;
 
-    Polinome p;
+    Polinome<complex> p_c;
+    Polinome<double> p_d;
 
 public:
 
